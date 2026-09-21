@@ -47,15 +47,24 @@ Compare experimental conditions
 
 Experimental Design
 
-I plan to use A/B comparisons so I can change one major part of the system and compare the results.
-
-Base model comparison: Compare two base model configurations on the same dream analysis task.
-
-Behavioral refinement: Compare the model’s behavior using different prompt designs. My current notebook includes a baseline and more structured prompt versions. I also plan to compare analysis without RAG against analysis using retrieved dream context.
-
-Test cases: Use different test dreams to see whether the same differences between the experimental conditions appear across more than one example.
-
-Keeping the test dream and other generation settings the same when comparing prompt versions will help show whether changes in the output are actually coming from the prompt refinement.
+Condition A: Base Model / Baseline Prompt
+Condition B: Base Model / Refined Prompt
+Condition C: Base Model / Refined Prompt + RAG
+—-Planned model-refinement conditions—-
+Condition D: QLoRa-Adapted Model / Refined Prompt
+Condition E: QLoRa-Adapted Model // Refined Prompt + RAG
+## What Each Condition Tests
+Condition A is the baseline. The base model receives a basic prompt and analyzes the test dream, without retrieved context or model adaptation. This establishes the starting performance of the system. 
+Condition B keeps the same base model and test dream, but replaces the baseline prompt —> refined structure prompt. Comparing A vs. B isolates the effect of behavioral refinement through prompt engineering. 
+Condition C keeps the same base model and refined prompt from B, but adds RAG. The retrieval system searches the previous dream entries using semantic similarity and supplies the most relevant entries as additional context. Comparing B vs. C isolates the effect of retrieval.
+Conditions D and E are the planned model-refinement stage. Condition D will use a QLoRA-adapted version of the model the refined prompt, but without any RAG. Comparing B vs. D will test whether the model adaptation changes performance independently of retrieval. 
+Condition E will combine the QLoRA-adapted model, refined prompt, and RAG. This will represent the complete system. Comparing D vs. E will test the additional contribution of retrieval after model adaptation, while comparing C vs. E will test the contribution of model adaptation when retrieval is already present. 
+A vs. B: baseline prompt vs. refined prompt
+B vs. C: no RAG vs. RAG
+B vs. D: base model vs. QLoRA-adapted model
+C vs. E: base model + RAG vs. adapted model + RAG
+D vs. E: adapted model w/o RAG vs. adapted model with RAG
+For each direct comparison, the other major experimental settings will be kept constant. This includes using the same test dream, generation settings, and model configuration unless the model itself is the variable being tested. 
 
 Goal
 
