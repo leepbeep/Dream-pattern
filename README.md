@@ -7,7 +7,7 @@ This is my IT 344 project exploring whether an AI model can analyze dream journa
 
 Data
 
-My dataset is a collection of 15 personal dream journal entries. The raw dataset will stay private and will not be uploaded.
+My current dataset is a collection of 15 dream journal entries used to test the model’s ability to identify recurring details and patterns across entries. I will continue expanding the dataset as additional entries are prepared, with a target of approximately 30 entries. 
 
 The entries were originally stored as text from my dream journal. I cleaned and prepared them so they could be processed consistently in the notebook. This included separating the dreams into individual entries and removing unnecessary formatting/text.
 
