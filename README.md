@@ -87,7 +87,9 @@ The experimental conditions will be evaluated using the same criteria so that ch
 ~ avoids introducing unsupported details
 ~ follows the requested analysis structure
 Each output will be evaluated using a consistent scoring rubric across these criteria. The same rubric will be applied to every experimental condition and test dream so that the results can be compared across conditions. I will record the individual criterion scores and overall results for each condition rather than selecting examples based only on qualitative impressions.
+
 Scoring Method
+
 Each evaluation criterion will be scored on a 0-2 scale:
 0 = Not demonstrated / the output does not meet the criterion.
 1 = Partially demonstrated / the output meets the criterion to some extent, but some relevant information is missing, incomplete or inconsistent.
@@ -96,6 +98,7 @@ Criteria not applicable to a condition will be marked as N/A. Overall scores wil
 I will compare across the conditions to determine what system component contributes to the final analysis.
 
 Test Procedure
+
 The same test dreams will be run through the applicable experimental conditions. For each direct comparison, I will keep the test input and generation settings constant and change only the component being tested.
 
 Multiple test dreams will be used so that the results are not based on a single example. The outputs from each condition will be saved and compared using the same evaluation criteria. 
