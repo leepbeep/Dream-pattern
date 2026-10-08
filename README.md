@@ -1,6 +1,6 @@
 Context-Aware Dream Interpretation System
 
-IT 344 — Machine Learning Project
+IT 344
 
 Project Overview
 
