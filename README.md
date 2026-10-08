@@ -18,21 +18,26 @@ Research Questions
 2. How does prompt refinement affect the detail, organization, and analytical quality of model-generated dream interpretations?
 3. How can retrieval-augmented generation (RAG) incorporate related dream entries when analyzing recurring people, places, events, and themes?
 
-Technical Stack
 
-Component	Technology
-Programming language	Python
-Base model	microsoft/Phi-3-mini-4k-instruct
-Model framework	Hugging Face Transformers
-Quantization	BitsAndBytes, 4-bit NF4
-Fine-tuning	QLoRA, PEFT
-Training	TRL SFTTrainer
-Dataset processing	Hugging Face Datasets
-Sentence embeddings	all-MiniLM-L6-v2
-Vector search	FAISS
-Computation	PyTorch, NumPy
-Evaluation	Pandas, human scoring
-Environment	Google Colab, NVIDIA T4 GPU
+## Technical Stack
+
+| Component | Technology | Purpose |
+|---|---|---|
+| Programming Language | Python | Main language for data processing, model inference, training, and evaluation |
+| Generative Language Model | `microsoft/Phi-3-mini-4k-instruct` | Dream analysis and structured information extraction |
+| Model Framework | Hugging Face Transformers | Model loading, tokenization, and text generation |
+| Deep Learning Framework | PyTorch | Tensor operations and neural network computation |
+| Quantization | BitsAndBytes (4-bit NF4) | Reduces model memory requirements |
+| Parameter-Efficient Fine-Tuning | QLoRA, Hugging Face PEFT | Trains low-rank adapters while keeping the base model weights frozen |
+| Training Framework | TRL `SFTTrainer` | Supervised fine-tuning using labeled dream narratives |
+| Dataset Processing | Hugging Face Datasets | Organizes and formats training examples |
+| Embedding Model | `all-MiniLM-L6-v2` (Sentence Transformers) | Converts dream narratives into 384-dimensional semantic embeddings |
+| Vector Similarity Search | FAISS `IndexFlatIP` | Retrieves semantically similar dreams using normalized embeddings |
+| Numerical Computing | NumPy | Array manipulation and embedding processing |
+| Evaluation | Pandas and manual rubric scoring | Organizes predictions and compares base versus QLoRA extraction performance |
+| Development Environment | Google Colab | Notebook-based experimentation and training |
+| GPU | NVIDIA Tesla T4 | GPU acceleration for model training and inference |
+
 
 Dataset and Preprocessing
 
