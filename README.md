@@ -122,7 +122,7 @@ Experimental Design
 
 Two conditions are compared:
 
-# Condition	Configuration
+### Condition	Configuration
 A — Base	Phi-3 Mini with the LoRA adapter disabled
 
 B — QLoRA	Phi-3 Mini with the trained LoRA adapter enabled
